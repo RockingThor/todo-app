@@ -17,9 +17,22 @@ export interface IIcon {
 }
 
 export interface ICategory {
+  _id: string;
   name: string;
   user: IUser | string;
   isEditable: boolean;
   color: IColor | string;
   icon: IIcon | string;
+}
+
+export interface ITask {
+  _id: string;
+  name: string;
+  user: IUser | string;
+  categoryId: ICategory | string;
+  isCompleted: boolean;
+  isEditable: boolean;
+  date: string;
+  createdAt: string;
+  updatedAt: string;
 }
